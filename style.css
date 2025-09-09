@@ -6,10 +6,10 @@ html, body {
 }
 
 body {
-  min-height: 90vh;
+  min-height: 80vh;
   width: 100vw;
   font-family: Arial, sans-serif;
-  background: url('images/Sip.jpg') center center/cover no-repeat fixed;
+  background: url('images/Sip.jpg') center center no-repeat fixed;background-size: 90vw auto;
   color: #fff;
   overflow-x: hidden;
 }
