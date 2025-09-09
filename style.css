@@ -6,10 +6,11 @@ html, body {
 }
 
 body {
-  min-height: 80vh;
+  min-height: 100vh;
   width: 100vw;
   font-family: Arial, sans-serif;
-  background: url('images/Sip.jpg') center center no-repeat fixed;background-size: 100vw auto;
+  background: url('images/Sip.png') center center no-repeat fixed;
+  background-size: 100% 100%;
   color: #fff;
   overflow-x: hidden;
 }
@@ -119,7 +120,7 @@ main {
 }
 
 header {
-  margin-top: 7rem; /* Shift header further down */
+  margin-top: 13rem; /* Shift header further down */
   margin-bottom: 2.5rem;
 }
 
@@ -301,4 +302,3 @@ footer {
   border: none !important;
   border-radius: 0 !important;
   margin: 0;
-}
