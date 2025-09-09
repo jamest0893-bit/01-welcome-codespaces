@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Top right nav menu -->
   <div class="nav-container">
     <div class="jerrycan-menu">
       <img src="images/jerrycan.png" alt="Menu" class="jerrycan-icon" />
@@ -22,10 +23,12 @@
     </div>
   </div>
 
+  <!-- Top left logo -->
   <div class="logo-container">
     <img src="images/charitylogo.png" alt="Charity: Water Logo" class="charity-logo" />
   </div>
 
+  <!-- Main content -->
   <header>
     <h1>Give Water. Watch it Change Everything.</h1>
     <p>Follow the impact on TikTok and Instagram as your support turns hope into health for communities in need.</p>
@@ -33,6 +36,19 @@
 
   <main>
     <section class="cta">
+      <div class="give-water-hover">
+        <button class="give-water-btn">Give Water</button>
+        <div class="give-water-dropdown">
+          <a href="#">Venmo</a>
+          <a href="#">Cash App</a>
+          <form class="credit-card-form" action="#" method="POST" onsubmit="alert('Thank you for your support! (Demo only)'); return false;">
+            <input type="text" name="cc-number" placeholder="Credit Card Number" required />
+            <input type="text" name="cc-exp" placeholder="MM/YY" required />
+            <input type="text" name="cc-cvc" placeholder="CVC" required />
+            <button type="submit">Donate with Credit Card</button>
+          </form>
+        </div>
+      </div>
       <a href="https://www.tiktok.com/@charitywater" target="_blank" rel="noopener noreferrer">Follow on TikTok</a>
       <a href="https://www.instagram.com/charitywater/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
     </section>
@@ -43,5 +59,3 @@
   </footer>
 </body>
 </html>
-
-

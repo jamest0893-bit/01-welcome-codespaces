@@ -2,8 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url('images/Sip.jpg') center center/cover no-repeat;
-  color: #333;
+  background: url('images/Examplepage.jpg') center center/cover no-repeat;
+  color: #fff;
   box-sizing: border-box;
 }
 
@@ -102,40 +102,145 @@ body {
   border-radius: 4px;
 }
 
-/* Shift main content left */
+/* Remove all box styling from header, main, footer */
 header, main, footer {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0;
+  padding: 0.5em 2em 0.5em 2em;
+  max-width: none;
   text-align: left;
-  margin-left: 2rem;
-  margin-right: auto;
-  max-width: 700px;
-  background: rgba(255,255,255,0.85);
-  border-radius: 12px;
-  margin-top: 7rem;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
 
-.cta a {
+header h1, header p {
+  margin: 0 0 0.5em 0;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Stylized transparent blue CTA button */
+.cta {
+  margin-top: 2em;
+  display: flex;
+  gap: 1em;
+}
+
+.give-water-hover {
+  position: relative;
   display: inline-block;
-  margin: 1rem;
+}
+
+.give-water-btn {
+  background: rgba(0, 123, 255, 0.25);
+  color: #1e90ff;
+  border: 2px solid #1e90ff;
+  border-radius: 30px;
+  padding: 1rem 2.5rem;
+  font-size: 1.15em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+  box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+  outline: none;
+  letter-spacing: 1px;
+  backdrop-filter: blur(2px);
+}
+
+.give-water-btn:hover,
+.give-water-btn:focus {
+  background: rgba(30, 144, 255, 0.45);
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.give-water-dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  background: rgba(255,255,255,0.97);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 1.5em 2em;
+  min-width: 260px;
+  z-index: 100;
+  color: #222;
+}
+
+.give-water-hover:hover .give-water-dropdown,
+.give-water-hover:focus-within .give-water-dropdown {
+  display: block;
+}
+
+.give-water-dropdown a {
+  display: block;
+  margin-bottom: 1em;
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.08em;
+  transition: color 0.2s;
+}
+
+.give-water-dropdown a:hover {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.credit-card-form input {
+  display: block;
+  width: 95%;
+  margin-bottom: 0.7em;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.credit-card-form button {
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 0.5em;
+  transition: background 0.2s;
+}
+
+.credit-card-form button:hover {
+  background: #0077cc;
+}
+
+.cta a:not(.give-water-btn) {
+  display: inline-block;
+  margin: 1rem 1rem 0 0;
   padding: 1rem 2rem;
-  background: #00bcd4;
-  color: white;
+  background: rgba(0,188,212,0.7);
+  color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background 0.3s ease;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
-.cta a:hover {
+.cta a:not(.give-water-btn):hover {
   background: #0097a7;
 }
 
 footer {
-  background: #333;
-  color: white;
+  color: #fff;
   text-align: left;
-  padding: 1rem;
-  border-radius: 0 0 12px 12px;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 1rem 2em;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0;
 }
