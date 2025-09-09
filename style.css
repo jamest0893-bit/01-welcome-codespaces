@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url('images/Sip.jpg') center center/cover no-repeat;
+  background: url('images/Examplepage.jpg') center center/cover no-repeat;
   color: #fff;
   box-sizing: border-box;
 }
@@ -102,9 +102,9 @@ body {
   border-radius: 4px;
 }
 
-/* Space out main content */
+/* Space out main content and shift lower */
 main {
-  margin-top: 8rem;
+  margin-top: 7rem;
   margin-left: 2.5rem;
   margin-right: auto;
   max-width: 700px;
@@ -112,6 +112,7 @@ main {
 }
 
 header {
+  margin-top: 4rem;
   margin-bottom: 2.5rem;
 }
 
@@ -289,3 +290,4 @@ footer {
   border: none !important;
   border-radius: 0 !important;
   margin: 0;
+}
