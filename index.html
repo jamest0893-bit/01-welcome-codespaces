@@ -1,67 +1,293 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charity: Water</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Top right nav menu -->
-  <div class="nav-container">
-    <div class="jerrycan-menu">
-      <img src="images/jerrycan.png" alt="Menu" class="jerrycan-icon" />
-      <span class="explore-text">Explore</span>
-      <nav class="slide-menu">
-        <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Get Involved</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('images/Sip.jpg') center center/cover no-repeat;
+  color: #fff;
+  box-sizing: border-box;
+}
 
-  <!-- Top left logo -->
-  <div class="logo-container">
-    <img src="images/charitylogo.png" alt="Charity: Water Logo" class="charity-logo" />
-  </div>
+/* Top left logo */
+.logo-container {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+}
 
-  <!-- Main content -->
-  <header>
-    <h1>Give Water. Watch it Change Everything.</h1>
-    <p>Follow the impact on TikTok and Instagram as your support turns hope into health for communities in need.</p>
-  </header>
+.charity-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
 
-  <main>
-    <section class="cta">
-      <div class="give-water-hover">
-        <button class="give-water-btn">Give Water</button>
-        <div class="give-water-dropdown">
-          <a href="#">Venmo</a>
-          <a href="#">Cash App</a>
-          <form class="credit-card-form" action="#" method="POST" onsubmit="alert('Thank you for your support! (Demo only)'); return false;">
-            <input type="text" name="cc-number" placeholder="Credit Card Number" required />
-            <input type="text" name="cc-exp" placeholder="MM/YY" required />
-            <input type="text" name="cc-cvc" placeholder="CVC" required />
-            <button type="submit">Donate with Credit Card</button>
-          </form>
-        </div>
-      </div>
-      <div class="follow-change-hover">
-        <button class="follow-change-btn">Follow the change</button>
-        <div class="follow-change-dropdown">
-          <a href="https://www.instagram.com/charitywater/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://x.com/charitywater" target="_blank" rel="noopener noreferrer">X</a>
-          <a href="https://www.tiktok.com/@charitywater" target="_blank" rel="noopener noreferrer">TikTok</a>
-        </div>
-      </div>
-    </section>
-  </main>
+/* Top right nav menu */
+.nav-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  <footer>
-    <p>&copy; 2025 Charity: Water. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+.jerrycan-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jerrycan-icon {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.jerrycan-icon:hover {
+  transform: scale(1.08);
+}
+
+.explore-text {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #0077cc;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.slide-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  min-width: 180px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.jerrycan-menu:hover .slide-menu,
+.jerrycan-menu:focus-within .slide-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.slide-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.slide-menu li {
+  padding: 0.5rem 1.5rem;
+}
+
+.slide-menu a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  transition: background 0.2s;
+}
+
+.slide-menu a:hover {
+  background: #e0f4ff;
+  border-radius: 4px;
+}
+
+/* Space out main content and shift lower */
+main {
+  margin-top: 7rem;
+  margin-left: 2.5rem;
+  margin-right: auto;
+  max-width: 700px;
+  padding: 2rem 1.5rem;
+}
+
+header {
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+.cta {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Give Water button: transparent blue, black text */
+.give-water-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.give-water-btn {
+  background: rgba(0, 123, 255, 0.18);
+  color: #111;
+  border: 2px solid #1e90ff;
+  border-radius: 30px;
+  padding: 1rem 2.5rem;
+  font-size: 1.15em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+  box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+  outline: none;
+  letter-spacing: 1px;
+  backdrop-filter: blur(2px);
+}
+
+.give-water-btn:hover,
+.give-water-btn:focus {
+  background: rgba(30, 144, 255, 0.35);
+  color: #111;
+  border: 2px solid #111;
+}
+
+.give-water-dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  background: rgba(255,255,255,0.97);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 1.5em 2em;
+  min-width: 260px;
+  z-index: 100;
+  color: #222;
+}
+
+.give-water-hover:hover .give-water-dropdown,
+.give-water-hover:focus-within .give-water-dropdown {
+  display: block;
+}
+
+.give-water-dropdown a {
+  display: block;
+  margin-bottom: 1em;
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.08em;
+  transition: color 0.2s;
+}
+
+.give-water-dropdown a:hover {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.credit-card-form input {
+  display: block;
+  width: 95%;
+  margin-bottom: 0.7em;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.credit-card-form button {
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 0.5em;
+  transition: background 0.2s;
+}
+
+.credit-card-form button:hover {
+  background: #0077cc;
+}
+
+/* Follow the change button: transparent yellow, black text */
+.follow-change-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.follow-change-btn {
+  background: rgba(255, 221, 51, 0.18);
+  color: #111;
+  border: 2px solid #e6b800;
+  border-radius: 30px;
+  padding: 1rem 2.5rem;
+  font-size: 1.15em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+  box-shadow: 0 2px 8px rgba(255,221,51,0.10);
+  outline: none;
+  letter-spacing: 1px;
+  backdrop-filter: blur(2px);
+}
+
+.follow-change-btn:hover,
+.follow-change-btn:focus {
+  background: rgba(255, 221, 51, 0.35);
+  color: #111;
+  border: 2px solid #111;
+}
+
+.follow-change-dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  background: rgba(255,255,255,0.97);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 1.5em 2em;
+  min-width: 200px;
+  z-index: 100;
+  color: #222;
+}
+
+.follow-change-hover:hover .follow-change-dropdown,
+.follow-change-hover:focus-within .follow-change-dropdown {
+  display: block;
+}
+
+.follow-change-dropdown a {
+  display: block;
+  margin-bottom: 1em;
+  color: #e6b800;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.08em;
+  transition: color 0.2s;
+}
+
+.follow-change-dropdown a:hover {
+  color: #b38f00;
+  text-decoration: underline;
+}
+
+/* Ensure dropdowns are above other content */
+.give-water-dropdown,
+.follow-change-dropdown {
+  z-index: 1000;
+}
+
+footer {
+  color: #fff;
+  text-align: left;
+  padding: 1rem 2em;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0;
+}
