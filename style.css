@@ -2,50 +2,26 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url('images/Sip.jpg') center center/cover no-repeat;
+  background: url('images/Examplepage.jpg') center center/cover no-repeat;
   color: #333;
-  padding-left: 40vw; /* Shift content to the right */
   box-sizing: border-box;
 }
 
-header {
-  background: rgba(0, 119, 204, 0.8);
-  color: white;
-  padding: 2rem;
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-}
-
-main {
-  padding: 2rem;
-  text-align: center;
-}
-
-.cta a {
-  display: inline-block;
-  margin: 1rem;
-  padding: 1rem 2rem;
-  background: #00bcd4;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.cta a:hover {
-  background: #0097a7;
-}
-
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+/* Top left logo */
+.logo-container {
   position: fixed;
-  bottom: 0;
-  width: 100%;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
 }
-/* ...existing code... */
+
+.charity-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* Top right nav menu */
 .nav-container {
   position: fixed;
   top: 2rem;
@@ -125,4 +101,42 @@ footer {
   background: #e0f4ff;
   border-radius: 4px;
 }
-/* ...existing code... */
+
+/* Shift main content left */
+header, main, footer {
+  text-align: left;
+  margin-left: 2rem;
+  margin-right: auto;
+  max-width: 700px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  margin-top: 7rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.cta a {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: #00bcd4;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta a:hover {
+  background: #0097a7;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
