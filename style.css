@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   font-family: Arial, sans-serif;
-  background: url('images/Sip.jpg') center center no-repeat fixed;
+  background: url('images/Sip.png') center center no-repeat fixed;
   background-size: 100% 100%;
   color: #fff;
   overflow-x: hidden;
@@ -119,13 +119,30 @@ main {
   padding: 2rem 1.5rem;
 }
 
+/* Condensed, centered header */
 header {
-  margin-top: 13rem; /* Shift header further down */
-  margin-bottom: 2.5rem;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
 }
 
-header h1, header p {
+header h1 {
   font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.2;
+}
+
+header p {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 1.05rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .cta {
@@ -302,3 +319,4 @@ footer {
   border: none !important;
   border-radius: 0 !important;
   margin: 0;
+}
