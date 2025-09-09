@@ -119,7 +119,7 @@ main {
 }
 
 header {
-  margin-top: 5rem;
+  margin-top: 7rem; /* Shift header further down */
   margin-bottom: 2.5rem;
 }
 
