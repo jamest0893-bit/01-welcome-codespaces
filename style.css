@@ -166,7 +166,7 @@ header p {
 .give-water-hover, .follow-change-hover {
   position: relative;
   display: inline-block;
-  width: 220px;
+  width: 200px;
 }
 
 .give-water-btn {
