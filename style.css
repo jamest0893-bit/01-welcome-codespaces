@@ -116,11 +116,11 @@ body {
 
 /* Space out main content and shift lower */
 main {
-  margin-top: 7rem;
+  margin-top: 3rem; /* Reduced to bring buttons higher */
   margin-left: 2.5rem;
   margin-right: auto;
   max-width: 700px;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 /* Condensed, left-justified header */
@@ -137,7 +137,7 @@ header {
 
 header h1 {
   font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem; /* Increase this value for larger header */
   margin-bottom: 0.7rem;
   line-height: 1.25;
   font-weight: 700;
@@ -196,7 +196,7 @@ header p {
   display: none;
   position: absolute;
   left: 0;
-  top: 110%;
+  bottom: 110%; /* Show above the button */
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
@@ -290,7 +290,7 @@ header p {
   display: none;
   position: absolute;
   left: 0;
-  top: 110%;
+  bottom: 110%; /* Show above the button */
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
@@ -358,9 +358,9 @@ footer {
     height: 36px;
   }
   main {
-    margin-top: 10rem;
+    margin-top: 2rem;
     margin-left: 0.5rem;
-    padding: 1.5rem .5rem;
+    padding: 1rem 0.5rem;
     max-width: 98vw;
   }
   header {
