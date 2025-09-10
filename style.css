@@ -8,8 +8,8 @@ html, body {
 body {
   min-height: 100vh;
   width: 100vw;
-  font-family: Arial, sans-serif;
-  background: url('images/Sip.jpg') center center no-repeat fixed;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  background: url('images/Hold.jpg') center center no-repeat fixed;
   background-size: 100% 100%;
   color: #fff;
   overflow-x: hidden;
@@ -21,6 +21,7 @@ body {
   top: 2rem;
   left: 2rem;
   z-index: 1000;
+  margin-bottom: 3rem; /* Extra space below logo */
 }
 
 .charity-logo {
@@ -61,9 +62,10 @@ body {
 .explore-text {
   margin-top: 0.5rem;
   font-weight: bold;
-  color: #0077cc;
+  color: #2E9DF7; /* Primary Blue */
   letter-spacing: 1px;
   font-size: 1rem;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
 }
 
 .slide-menu {
@@ -98,15 +100,17 @@ body {
 }
 
 .slide-menu a {
-  color: #0077cc;
+  color: #2E9DF7; /* Primary Blue */
   text-decoration: none;
   font-weight: 500;
   display: block;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
 }
 
 .slide-menu a:hover {
-  background: #e0f4ff;
+  background: #8BD1CB; /* Light Blue */
+  color: #159A48; /* Dark Green */
   border-radius: 4px;
 }
 
@@ -121,7 +125,7 @@ main {
 
 /* Condensed, left-justified header */
 header {
-  margin-top: 5rem;
+  margin-top: 7rem; /* Increased space from logo */
   margin-bottom: 1.5rem;
   max-width: 340px;
   text-align: left;
@@ -132,20 +136,24 @@ header {
 }
 
 header h1 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
-  font-size: 1.6rem;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  font-size: 2.5rem;
   margin-bottom: 0.7rem;
   line-height: 1.25;
   font-weight: 700;
+  color: #FFC907; /* Primary Yellow */
+  text-shadow: 1px 1px 8px rgba(44,44,44,0.18);
 }
 
 header p {
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.5;
   font-weight: 400;
+  color: #fff;
+  text-shadow: 1px 1px 8px rgba(44,44,44,0.12);
 }
 
 .cta {
@@ -154,33 +162,34 @@ header p {
   align-items: flex-start;
 }
 
-/* Give Water button: transparent blue, black text */
+/* Give Water button: primary blue, black text */
 .give-water-hover {
   position: relative;
   display: inline-block;
 }
 
 .give-water-btn {
-  background: rgba(0, 123, 255, 0.18);
+  background: rgba(46, 157, 247, 0.18); /* Primary Blue */
   color: #111;
-  border: 2px solid #1e90ff;
+  border: 2px solid #2E9DF7;
   border-radius: 30px;
   padding: 1rem 2.5rem;
   font-size: 1.15em;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s, color 0.3s, border 0.3s;
-  box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+  box-shadow: 0 2px 8px rgba(46,157,247,0.10);
   outline: none;
   letter-spacing: 1px;
   backdrop-filter: blur(2px);
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
 }
 
 .give-water-btn:hover,
 .give-water-btn:focus {
-  background: rgba(30, 144, 255, 0.35);
-  color: #111;
-  border: 2px solid #111;
+  background: #2E9DF7;
+  color: #fff;
+  border: 2px solid #FFC907; /* Yellow border on hover */
 }
 
 .give-water-dropdown {
@@ -188,7 +197,7 @@ header p {
   position: absolute;
   left: 0;
   top: 110%;
-  background: rgba(255,255,255,0.97);
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   padding: 1.5em 2em;
@@ -205,15 +214,16 @@ header p {
 .give-water-dropdown a {
   display: block;
   margin-bottom: 1em;
-  color: #1e90ff;
+  color: #2E9DF7;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.08em;
   transition: color 0.2s;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
 }
 
 .give-water-dropdown a:hover {
-  color: #0077cc;
+  color: #159A48; /* Dark Green */
   text-decoration: underline;
 }
 
@@ -222,13 +232,14 @@ header p {
   width: 95%;
   margin-bottom: 0.7em;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #8BD1CB; /* Light Blue */
   border-radius: 4px;
   font-size: 1em;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
 }
 
 .credit-card-form button {
-  background: #1e90ff;
+  background: #4FCB53; /* Green */
   color: #fff;
   border: none;
   padding: 0.7em 1.5em;
@@ -238,39 +249,41 @@ header p {
   font-size: 1em;
   margin-top: 0.5em;
   transition: background 0.2s;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
 }
 
 .credit-card-form button:hover {
-  background: #0077cc;
+  background: #159A48; /* Dark Green */
 }
 
-/* Follow the change button: transparent yellow, black text */
+/* Follow the change button: primary yellow, black text */
 .follow-change-hover {
   position: relative;
   display: inline-block;
 }
 
 .follow-change-btn {
-  background: rgba(255, 221, 51, 0.18);
+  background: rgba(255, 201, 7, 0.18); /* Primary Yellow */
   color: #111;
-  border: 2px solid #e6b800;
+  border: 2px solid #FFC907;
   border-radius: 30px;
   padding: 1rem 2.5rem;
   font-size: 1.15em;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s, color 0.3s, border 0.3s;
-  box-shadow: 0 2px 8px rgba(255,221,51,0.10);
+  box-shadow: 0 2px 8px rgba(255,201,7,0.10);
   outline: none;
   letter-spacing: 1px;
   backdrop-filter: blur(2px);
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
 }
 
 .follow-change-btn:hover,
 .follow-change-btn:focus {
-  background: rgba(255, 221, 51, 0.35);
-  color: #111;
-  border: 2px solid #111;
+  background: #FFC907;
+  color: #2E9DF7; /* Blue text on yellow */
+  border: 2px solid #2E9DF7;
 }
 
 .follow-change-dropdown {
@@ -278,7 +291,7 @@ header p {
   position: absolute;
   left: 0;
   top: 110%;
-  background: rgba(255,255,255,0.97);
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   padding: 1.5em 2em;
@@ -295,15 +308,16 @@ header p {
 .follow-change-dropdown a {
   display: block;
   margin-bottom: 1em;
-  color: #e6b800;
+  color: #2E9DF7;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.08em;
   transition: color 0.2s;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
 }
 
 .follow-change-dropdown a:hover {
-  color: #b38f00;
+  color: #F16061; /* Pink */
   text-decoration: underline;
 }
 
@@ -322,4 +336,66 @@ footer {
   border: none !important;
   border-radius: 0 !important;
   margin: 0;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+}
+
+/* ----------- MOBILE FRIENDLY STYLES ----------- */
+@media (max-width: 700px) {
+  .logo-container {
+    top: 1rem;
+    left: 1rem;
+    margin-bottom: 2rem;
+  }
+  .charity-logo {
+    height: 36px;
+  }
+  .nav-container {
+    top: 1rem;
+    right: 1rem;
+  }
+  .jerrycan-icon {
+    width: 36px;
+    height: 36px;
+  }
+  main {
+    margin-top: 10rem;
+    margin-left: 0.5rem;
+    padding: 1.5rem .5rem;
+    max-width: 98vw;
+  }
+  header {
+    margin-top: 3.5rem;
+    margin-left: 0.5rem;
+    max-width: 98vw;
+    padding: 0;
+  }
+  header h1 {
+    font-size: 1.1rem;
+  }
+  header p {
+    font-size: 0.95rem;
+  }
+  .cta {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  .give-water-btn,
+  .follow-change-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+  .give-water-dropdown,
+  .follow-change-dropdown {
+    min-width: 90vw;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .slide-menu {
+    min-width: 120px;
+    right: 0;
+    left: auto;
+  }
 }
