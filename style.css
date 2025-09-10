@@ -169,7 +169,7 @@ header p {
   width: 220px;
 }
 
-.give-water-btn, .follow-change-btn {
+.give-water-btn {
   width: 100%;
   background: rgba(46, 157, 247, 0.18);
   color: #111;
@@ -181,6 +181,26 @@ header p {
   cursor: pointer;
   transition: background 0.3s, color 0.3s, border 0.3s, opacity 0.2s;
   box-shadow: 0 2px 8px rgba(46,157,247,0.10);
+  outline: none;
+  letter-spacing: 1px;
+  backdrop-filter: blur(2px);
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+.follow-change-btn {
+  width: 100%;
+  background: rgba(255, 201, 7, 0.18); /* Yellow */
+  color: #111;
+  border: 2px solid #FFC907;
+  border-radius: 30px;
+  padding: 1rem 2.5rem;
+  font-size: 1.15em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s, opacity 0.2s;
+  box-shadow: 0 2px 8px rgba(255,201,7,0.10);
   outline: none;
   letter-spacing: 1px;
   backdrop-filter: blur(2px);
@@ -205,19 +225,22 @@ header p {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(46, 157, 247, 0.97);
-  border: 2px solid #2E9DF7;
   border-radius: 30px;
   box-shadow: 0 2px 8px rgba(46,157,247,0.10);
-  padding: 1.2em 2em;
+  padding: 1.2em 1em;
   z-index: 3;
   color: #111;
   text-align: center;
   animation: fadeIn 0.2s;
 }
 
+.give-water-dropdown {
+  background: rgba(46, 157, 247, 0.97);
+  border: 2px solid #2E9DF7;
+}
+
 .follow-change-dropdown {
-  background: rgba(255, 201, 7, 0.97);
+  background: rgba(255, 201, 7, 0.97); /* Yellow */
   border: 2px solid #FFC907;
 }
 
@@ -364,6 +387,3 @@ footer {
   .slide-menu {
     min-width: 120px;
     right: 0;
-    left: auto;
-  }
-}
